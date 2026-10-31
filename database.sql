@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS wanderdesk
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+USE wanderdesk;
+
+CREATE TABLE IF NOT EXISTS registrations (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    age TINYINT UNSIGNED NOT NULL,
+    destination VARCHAR(100) NOT NULL,
+    travel_date DATE NOT NULL,
+    travellers TINYINT UNSIGNED NOT NULL,
+    requirements TEXT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
